@@ -57,7 +57,7 @@ alert(`お買い上げありがとうございました！残りの所持金は$
 // 9950円から5000円を引いて、配列に5000円を入れる
 // もし5000円以上の場合は〜
 // 5000円1枚,1000円1枚,1000円2枚,1000円3枚,1000円4枚,100円0枚,100円1枚,100円2枚,100円3枚のお返しですお買い上げありがとうございます！となってる
-function chanMon(useMoney) {
+function chanMon(useMoney:number) {
     let n = 0
     let changer = useMoney
     let changeMoney: string[] = []
@@ -77,7 +77,7 @@ function chanMon(useMoney) {
         }
     }
     if (changer >= 500) {
-        for (let n = 0; changer >= 500; n++) {
+        for (let n = 1; changer >= 500; n++) {
             changer -= 500
             if (changer >= 500) {
                 continue
