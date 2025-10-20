@@ -4,37 +4,56 @@
 <head>
     <meta charset="UTF-8" />
     <title>電卓</title>
+    <!-- css -->
     <link rel="stylesheet" href="cal.css">
+    <!-- googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 </head>
+<!-- 一旦Macについてる電卓を真似してみる -->
 
 <body>
+    <div class="calArea">
+        <div class="dispArea" id="dispArea">
+            <p id="displayText">0</p>
+        </div>
+        <div class="btnArea" id="btnArea">
+            <button class="button" id="c">C</button>
+            <button class="button" id="ac">AC</button>
+            <button class="button" id="%">%</button>
+            <button class="button org" id="/">/</button>
 
-    <div class="calArea" id="calArea">
-        <p id="displayArea"></p>
-    </div>
-    <div id="btnArea">
-        <button class="button" id="1">1</button>
-        <button class="button" id="2">2</button>
-        <button class="button" id="3">3</button>
-        <button class="button" id="4">4</button>
-        <button class="button" id="5">5</button>
-        <button class="button" id="6">6</button>
-        <button class="button" id="7">7</button>
-        <button class="button" id="8">8</button>
-        <button class="button" id="9">9</button>
-        <button class="button" id="0">0</button>
-        <button class="button" id="c">C</button>
-        <button class="button" id="e">E</button>
-        <button class="button" id="+">+</button>
-        <button class="button" id="-">-</button>        
-        <button class="button" id="btn">ボタン</button>
+            <button class="button" id="7">7</button>
+            <button class="button" id="8">8</button>
+            <button class="button" id="9">9</button>
+            <button class="button org" id="x">x</button>
 
+            <button class="button" id="4">4</button>
+            <button class="button" id="5">5</button>
+            <button class="button" id="6">6</button>
+            <button class="button org" id="-">-</button>
+
+            <button class="button" id="1">1</button>
+            <button class="button" id="2">2</button>
+            <button class="button" id="3">3</button>
+            <button class="button org" id="+">+</button>
+
+            <button class="button" id="">+-</button>
+            <button class="button" id="0">0</button>
+            <button class="button" id=".">.</button>
+            <button class="button org" id="=">=</button>
+
+            <button class="button btn" id="btn">ボタン</button>
+        </div>
     </div>
-        <script>
-        const disp = document.querySelector("#displayArea")
+    <script>
+        // 授業でやった内容　イベント機能を使って要素を取得したりできる
+        // これを使えば電卓もできる？　発火タイミングと動き続けるのが難しい？
+        const text = document.querySelector("#displayText")
         const btn = document.querySelector("#btn")
         btn.onclick = () => {
-            disp.textContent = "ボタンを押しました"
+            text.textContent = "ボタンを押しました"
         }
     </script>
 </body>

@@ -1,7 +1,65 @@
 @charset "utf-8";
 
+
+
 .calArea {
-    width: 16rem;
+    border: solid 2px rgba(94, 94, 94, 0.464);
+    width: 14rem;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 1rem;
+    background-color: rgb(46, 43, 43);
+}
+
+.dispArea {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+    width: 14rem;
+    height: 5rem;
+    border-bottom: solid 2px gray;
+    /* border-bottomは最終的には消す　マージンなどの確認のため作成 */
+    margin: 0;
+}
+
+.dispArea p {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    color: rgb(216, 216, 216);
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.btnArea {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 15rem;
+    justify-content: center;
+    margin: 1px;
+    gap: 7px;
+}
+
+.button {
+    /* margin: 1px; */
+    width: 3rem;
     height: 3rem;
-    border: solid 2px gray;
+    border-radius: 3rem;
+    border: solid 1px gray;
+    /* border-color: gray; */
+    background-color: rgba(128, 128, 128, 0.464);
+    color: rgb(216, 216, 216);
+    font-size: 1.3rem;
+    font-family: "Noto Sans JP", sans-serif;
+
+}
+
+.org {
+    background-color: darkorange;
+}
+
+.btn {
+    width: 4rem;
+    height: 3rem;
 }
