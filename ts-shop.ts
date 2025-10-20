@@ -6,9 +6,13 @@
 // 再度繰り返しprompt
 // promptのメッセージに残金はいくらと表示
 // 何も買えなくなったらalertして終わり
-
 // お釣りを実際の硬貨として払い出すようにする　関数にしちゃう
+
+// イマココ
 // 購入履歴を出す 表示としてはキャベツキャベツじゃなくてキャベツ*2のような表示
+// message=キャベツになる　* n個にする　カウントをインクリメントすると二連続で購入した時以外に加算できない？
+// 購入商品が正しく認証されていて、購入フローまで進んでいるのは    if (useMoney >= auth) {からesleまでの範囲
+// 配列に入れる？オブジェクトに入れる？二重配列？
 // productsがconst products = [
 //     {name: "キャベツ", price: 190},
 //     {name: "にんじん", price: 210},
@@ -28,6 +32,8 @@ const products = {
 
 const minPrice = Math.min(...Object.values(products))
 
+const purchseHistory:string[] = []
+
 while (useMoney >= minPrice) {
     const message = prompt(`所持金は${useMoney}です、何を購入されますか、Qで終了`,)
 
@@ -43,8 +49,11 @@ while (useMoney >= minPrice) {
 
     if (useMoney >= auth) {
         useMoney -= auth
+        purchseHistory.push(message)
         alert(`${message}は${auth}円ですお買い上げありがとうございます！`)
         alert(chanMon(useMoney))
+        console.log(purchseHistory);
+        
     } else {
         alert(`${message}は${auth}円です、所持金が足りません。`)
     }
@@ -136,7 +145,23 @@ function chanMon(useMoney:number) {
         }
         n = n * 0
     }
-    console.log(changeMoney)
+    // console.log(changeMoney)
     return (`${changeMoney}のお返しですお買い上げありがとうございます！`)
 
 }
+
+        
+function purchse(message:string) {
+    let product = ""
+    let n = 1
+    for (const history of purchseHistory) {
+        if (message !== history) {
+            product = message
+        } else {
+            
+        }
+    }
+    
+}
+
+export{}

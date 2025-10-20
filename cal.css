@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+.calArea {
+    width: 16rem;
+    height: 3rem;
+    border: solid 2px gray;
+}
